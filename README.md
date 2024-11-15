@@ -1,0 +1,1 @@
+This is the laboratory log, participant_id and runs used, code used for the study entitled "Examining the role of phonological and semantic mechanisms during morphological processing of sentences in seven-year-old children"
