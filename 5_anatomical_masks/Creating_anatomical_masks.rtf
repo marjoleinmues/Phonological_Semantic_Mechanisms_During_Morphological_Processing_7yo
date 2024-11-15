@@ -1,0 +1,32 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Anatomical masks were made using the following code in the terminal and then running the truncate script\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs32 \cf0 \expnd0\expndtw0\kerning0
+auto_warp.py -base mw_com_T1_Age_0096.nii -input MNI_T1.nii -skull_strip_input yes\
+\
+3dNwarpApply -master MNI_T1.aw.nii -dxyz 2 -source aal_MNI_V4.nii -nwarp "anat.un.aff.qw_WARP.nii anat.un.aff.nii.Xaff12.1D" -ainterp NN -prefix aal_MNI_V4_NL.nii\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 . fs_afni_load.sh
+\fs29\fsmilli14667 \
+
+\fs32 \
+#cd to the templates folde
+\fs29\fsmilli14667 \
+
+\fs32 \
+3dcalc -a aal_MNI_V4_NL.nii -expr 'equals(a,85)' -prefix MTG.nii
+\fs29\fsmilli14667 \
+\
+#85 = MTG\
+#81 = STG\
+#11 = IFGop\
+#12 = IFGtri}
