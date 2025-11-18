@@ -2,3 +2,5 @@ This is the laboratory log, participant_id and runs used, code used for the stud
 
 The data is available open access via https://openneuro.org/datasets/ds003604/versions/1.0.7
 The analytical plan was preregistered here: https://osf.io/juzcm
+
+This paper has since been published in Cerebral Cortex: https://academic.oup.com/cercor/article/35/5/bhaf115/8130366 
